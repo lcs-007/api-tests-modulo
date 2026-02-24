@@ -32,7 +32,7 @@ jobs:
 
       - name: Run tests (only main specs) + generate HTML report
         run: |
-          npx cypress run --spec "cypress/e2e/{categories,products,login}.cy.js"
+          npx cypress run --config excludeSpecPattern="**/debug-*.cy.js"
           npm run report:merge
           npm run report:html
 
