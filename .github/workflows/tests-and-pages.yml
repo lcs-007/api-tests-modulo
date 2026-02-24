@@ -31,10 +31,11 @@ jobs:
         run: npm ci || npm install
 
       - name: Run tests and generate report
-       run: npx cypress run --config excludeSpecPattern="**/debug-*.cy.js"
+        run: npx cypress run --config excludeSpecPattern="**/debug-*.cy.js"
 
-      - name: Ensure index.html exists
+      - name: Prepare folder for Pages
         run: |
+          mkdir -p cypress/reports/html
           if [ -f "cypress/reports/index.html" ]; then
             cp cypress/reports/index.html cypress/reports/html/index.html
           fi
