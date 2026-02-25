@@ -1,0 +1,12 @@
+node_modules
+.git
+.github
+cypress/videos
+cypress/screenshots
+cypress/reports
+allure-results
+allure-report
+coverage
+dist
+build
+.DS_Store
